@@ -4,6 +4,15 @@
 - Les fonctions définies avec async vont donc toujours retourner une promesse qui sera résolue avec la valeur renvoyée par la fonction asynchrone
 ou qui sera rompue s’il y a une exception non interceptée émise depuis la fonction asynchrone.
 
+```javascript
+async function bonjour(){
+  return 'Bonjour';
+}
+
+//La valeur retournée par bonjour() est enveloppée dans une promesse
+bonjour().then(alert); // Bonjour
+```
+
 ### await ###
 - Le mot clef await est uniquement valide au sein de fonctions asynchrones définies avec async.
 - Il permet d’interrompre l’exécution d’une fonction asynchrone tant qu’une promesse n’est pas résolue ou rejetée.
